@@ -124,6 +124,8 @@ void HouseOfElves::work() {
         workshopGifts.push_back(gift);
     }
 
+    //checks every presents from the wishlists and decide if the child has
+    // enough money to get that present or if the present is in the workshop at all
     for (auto it = pair.begin(); it != pair.end(); it++) {
         for (int i = 0; i < it->first.wish_list.size(); i++){
             for (int j = 0; j < workshopGifts.size(); j++) {
@@ -276,6 +278,8 @@ void Santa::work() {
     int ct = 0;
     int begin = 1;
     int x = 1;
+
+    //insert in a matrix every town from csv
     while (list >> temp) {
         std::stringstream ss(temp);
         std::vector<std::string> row;
